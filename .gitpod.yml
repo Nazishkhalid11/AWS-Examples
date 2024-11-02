@@ -1,0 +1,12 @@
+# List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
+tasks:
+  curl -fSsl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip -qq awscliv2.zip
+sudo ./aws/install --update
+rm awscliv2.zip
+
+cd $THEIA_WORKSPACE_ROOT
+
+gp env export AWS_ACCESS_KEY_ID=AKIAZQ3DT55PIZGKO7QD
+gp env export AWS_SECRET_ACCESS_KEY=wJalro0TW8009hVA9ES/KWhQwuLW4Bo3zPVhK+FHBYlba
+gp env export AWS_DEFAULT_REGION=us-west-2
